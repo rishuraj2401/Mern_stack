@@ -18,8 +18,16 @@ export const todoSlice= createSlice({
             state.todos= state.todos.filter((todo)=>
                 todo.id!==action.payload
             )
+            console.log(state.todos);
+        },
+        updateTodo: (state,action)=>{
+            console.log(action.payload);
+            // state.todos.map((t)=>t.id)
+        //   var a=[];a=  state.todos.filter((todo)=>todo.id===action.payload)
+            var a= state.todos.find((id)=>id.id===action.payload.id).text=action.payload.text;
+            console.log(a);
         }
     }
 });
-export const {addTodo, removeTodo} =todoSlice.actions
+export const {addTodo, removeTodo, updateTodo} =todoSlice.actions
 export  const todoReducer= todoSlice.reducer
