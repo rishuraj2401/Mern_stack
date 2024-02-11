@@ -3,7 +3,7 @@ const initialState ={
     todos: [{id:1, text:"hello world"}]
 }
 export const todoSlice= createSlice({
-    name:'todo',
+    name:'todoSlice',
     initialState,
     reducers:{
         addTodo:(state, action)=>{
@@ -30,4 +30,4 @@ export const todoSlice= createSlice({
     }
 });
 export const {addTodo, removeTodo, updateTodo} =todoSlice.actions
-export  const todoReducer= todoSlice.reducer
+export  default todoSlice.reducer
