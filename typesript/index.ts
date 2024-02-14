@@ -8,5 +8,6 @@ const ob: abc ={
     a:"heyy",
     b:78
 }
+
 func<number, number>(ob.b,ob.b)  
 app.listen(8081, ()=>console.log("running2"))
